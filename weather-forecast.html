@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Forecast</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="current-weather-container">
+            <div class="search-box-container">
+                <i class='bx bxs-map'></i>
+                <input class="location-input" placeholder="Enter Location">
+                <button class="bx bx-search" onclick="getWeatherInfo()"></button>
+            </div>
+
+            <div class="weather-container">
+                <div class="weather-title">
+                    <p>Current weather in <span class="location-name">(-------)</span></p>
+                    <p class="temp">-°C</p>
+                </div>
+                <div class="weather-footer">
+                    <div class="icon-container">
+                        <img class="icon" src="" alt="weather-icon">
+                        <p class="description">-</p>
+                    </div>
+                    <div>
+                        <p>Humidity: <span class="humidity">-%</span></p>
+                    <p>Wind speed: <span class="wind-speed">-km/h</span></p>
+                    <p class="date">Monday, May 30 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="five-days-weather-container">
+            <p class="five-days-title">5 Days Weather Forecast</p>
+            <div class="weather" id="day1">
+                <p class="day-1">Mon</p>
+                <p class="temp">-°C</p>
+                <div>
+                <img class="icon" id="img1" src="" alt="weather-icon">
+                <p id="description1"></p>
+                </div>
+            </div>
+            <div class="weather" id="day2">
+                <p class="day-2">Mon</p>
+                <p class="temp">-°C</p>
+                <div>
+                    <img class="icon" id="img2" src="" alt="weather-icon">
+                    <p id="description2"></p>
+                </div>
+            </div>
+            <div class="weather" id="day3">
+                <p class="day-3">Mon</p>
+                <p class="temp">-°C</p>
+                <div>
+                    <img class="icon" id="img3" src="" alt="weather-icon">
+                    <p id="description3"></p>
+                </div>
+            </div>
+            <div class="weather" id="day4">
+                <p class="day-4">Mon</p>
+                <p class="temp">-°C</p>
+                <div>
+                    <img class="icon" id="img4" src="" alt="weather-icon">
+                    <p id="description4"></p>
+                </div>
+            </div>
+            <div class="weather" id="day5">
+                <p class="day-5">Mon</p>
+                <p class="temp">-°C</p>
+                <div>
+                    <img class="icon" id="img5" src="" alt="weather-icon">
+                    <p id="description5"></p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
