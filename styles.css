@@ -11,13 +11,6 @@ main {
     align-items: center;
     min-height: 100vh;
     background: url("https://wallpapersmug.com/download/1920x1080/668254/mountain-mist-horizon-nature.jpg") no-repeat;
-    /*
-    acik: https://wallpapercave.com/wp/wp10927461.jpg
-    yagmur: https://w.wallhaven.cc/full/xl/wallhaven-xl3rll.jpg
-    kar: https://wallpaperbat.com/img/8616027-minimalist-snow-wallpaper.jpg
-    parcali bulut: https://i3.wp.com/wallpapersmug.com/download/1920x1080/7a22c5/forest_mountains_sunset_cool_weather_minimalism.jpg
-    kapali: https://wallpapersmug.com/download/1920x1080/668254/mountain-mist-horizon-nature.jpg
-    */
     background-size: cover;
 }
 
