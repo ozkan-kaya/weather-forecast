@@ -44,17 +44,15 @@ const date = new Date();
 const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-function checkDay(day){
-    if (day + date.getDay() > 6){
-        return day + date.getDay() - 7;
-    }
-    else {
-        return day + date.getDay();
-    }
+function checkDay(dayOffset) {
+    const todayIndex = date.getDay();
+    const targetIndex = (todayIndex + dayOffset) % 7;
+    return targetIndex;
 }
 
-document.querySelector('.date').innerHTML = `${weekday[checkDay(0)]}, ${months[date.getMonth()]} ${date.getDay()}, ${date.getFullYear()}` ;
+document.querySelector('.date').innerHTML = `${weekday[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 
 for (let i = 0; i < 5; i++) {
-    document.querySelector('.day-' + (i+1)).innerHTML = weekday[checkDay(i)].substring(0,3);
+    const dayIndex = checkDay(i + 1);
+    document.querySelector('.day-' + (i+1)).innerHTML = weekday[dayIndex].substring(0, 3);
 }
